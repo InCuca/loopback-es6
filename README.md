@@ -1,5 +1,5 @@
 # loopback-es6
-A Loopback project scaffold using ES6, Babel and Gulp
+A Loopback project scaffold using ES6, Babel, Gulp and Mocha for tests
 
 ## Installation
 
