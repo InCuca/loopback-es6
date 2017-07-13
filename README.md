@@ -1,4 +1,6 @@
 # loopback-es6
+[![Build Status](https://travis-ci.org/InCuca/loopback-es6.png)](https://travis-ci.org/InCuca/loopback-es6)
+
 A Loopback project scaffold using ES6, Babel, Gulp and Mocha for tests
 
 ## Installation
@@ -30,4 +32,3 @@ A Loopback project scaffold using ES6, Babel, Gulp and Mocha for tests
 ```
   $ npm run build
 ```
-
