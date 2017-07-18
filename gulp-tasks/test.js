@@ -7,6 +7,6 @@ gulp.task('test', ['build'], () => {
   gulp.src(path.resolve(dirs.buildTest, '**/*.test.js'))
   .pipe(mocha({
     compilers: 'js:babel-core/register',
-    require: path.resolve(dirs.test, 'config.js')
+    require: path.resolve(dirs.test, 'config.js'),
   }));
 });

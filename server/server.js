@@ -21,7 +21,7 @@ app.start = function() {
 
 app.close = function() {
   httpServer.close();
-}
+};
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.

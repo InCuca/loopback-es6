@@ -12,7 +12,7 @@ import {dirs} from './config.js';
 gulp.task('build:test', () => {
   return gulp.src([
     path.resolve(dirs.test, '**/*.test.js'),
-    path.resolve(dirs.test, 'config.js')
+    path.resolve(dirs.test, 'config.js'),
   ])
   .pipe(sourcemaps.init())
   .pipe(babel())
@@ -24,7 +24,7 @@ gulp.task('build:client', ['copy:client'], () => {
   let b = browserify({
     entries: path.resolve(dirs.srcClient, 'main.js'),
     debug: true,
-    transform: [babelify, vueify]
+    transform: [babelify, vueify],
   });
 
   return b.bundle()

@@ -14,7 +14,7 @@ describe('boot process', () => {
         expect(res.body).to.have.property('started');
         expect(res.body).to.have.property('uptime');
         done();
-      })
+      });
     });
   });
 

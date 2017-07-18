@@ -33,6 +33,7 @@
     "chai-http": "^3.0.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "eslint-plugin-vue": "beta",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^6.1.2",
