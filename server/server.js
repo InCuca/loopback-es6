@@ -3,18 +3,25 @@ import boot from 'loopback-boot';
 
 const app = loopback();
 
+let httpServer;
+
 app.start = function() {
   // start the web server
-  return app.listen(function() {
+  httpServer = app.listen(function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
-    console.log('Web server listening at: %s', baseUrl);
+    console.log('API server listening at: %s', baseUrl);
     if (app.get('loopback-component-explorer')) {
       var explorerPath = app.get('loopback-component-explorer').mountPath;
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
     }
   });
+  return httpServer;
 };
+
+app.close = function() {
+  httpServer.close();
+}
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
