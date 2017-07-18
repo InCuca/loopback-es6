@@ -3,6 +3,8 @@
 
 A Loopback project scaffold using ES6, Babel, Gulp and Mocha for tests
 
+### Checkout `vuejs` branch for the Vue.js version.
+
 ## Installation
 
 ```
