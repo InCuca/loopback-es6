@@ -8,13 +8,13 @@ describe('boot process', () => {
   it('should return server status by root.js', (done) => {
     root(server);
 
-    server.listen(() => {
+    let conn = server.listen(8000, () => {
       request(server).get('/').then((res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.have.property('started');
         expect(res.body).to.have.property('uptime');
-        done();
-      })
+        conn.close(done);
+      });
     });
   });
 
