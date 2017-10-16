@@ -12,8 +12,8 @@ gulp.task('reload:server', ['build:server'], () => {
 
 gulp.task('watch:server', () => {
   gulp.watch([
-    dirs.srcServer + '**/*.js',
-    dirs.srcCommon + '**/*.js',
+    dirs.srcServer + '/**/*.js',
+    dirs.srcCommon + '/**/*.js',
   ], ['reload:server']);
 });
 
@@ -24,9 +24,9 @@ gulp.task('reload:client', ['build:client'], () => {
 
 gulp.task('watch:client', () => {
   gulp.watch([
-    dirs.srcClient + '**/*.js',
-    dirs.srcCommon + '**/*.js',
-    dirs.srcClient + '**/*.vue',
+    dirs.srcClient + '/**/*.js',
+    dirs.srcCommon + '/**/*.js',
+    dirs.srcClient + '/**/*.vue',
   ], ['reload:client']);
 });
 
